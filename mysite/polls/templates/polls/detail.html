@@ -1,0 +1,8 @@
+<form action="{% url 'polls:compra' produtos.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ produtos.nomeProduto }}</h1></legend>
+        {{ formulario.as_p }}
+    </fieldset>
+    <input type="submit" value="compra">
+</form>

@@ -1,0 +1,13 @@
+li a {
+    color: green;
+    text-align: center;
+}
+
+body {
+    background: white;
+}
+
+img {
+    max-height: 200px;
+    max-width: 200px;
+}

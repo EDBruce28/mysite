@@ -1,0 +1,18 @@
+{% load static %}
+<h1>
+    Padaria Genérica
+</h1>
+<h2>Escolha seu produto:<h2>
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+{% if listaProdutos %}
+    <ul>
+    {% for produtos in listaProdutos %}
+        <img src="{%static produtos.imagem%}"/>
+        <li>
+            <a href="{% url 'polls:detail' produtos.id %}">{{ produtos.nomeProduto }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
